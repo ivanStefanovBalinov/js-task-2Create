@@ -1,0 +1,8 @@
+@import "../index.css";
+
+.cell {
+  width: 9rem;
+  height: 9rem;
+  display: block;
+  border: 1px solid black;
+}
