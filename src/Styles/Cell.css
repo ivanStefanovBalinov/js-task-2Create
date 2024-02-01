@@ -5,4 +5,5 @@
   height: 9rem;
   display: block;
   border: 1px solid black;
+  cursor: pointer;
 }

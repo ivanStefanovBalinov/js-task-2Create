@@ -1,0 +1,9 @@
+.game {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(200, 243, 200),
+    rgb(214, 141, 141)
+  );
+}
