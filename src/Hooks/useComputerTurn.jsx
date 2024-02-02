@@ -17,6 +17,7 @@ const useComputerTurn = (
 
         if (availableCells.length > 0) {
           let randomIndex;
+          //do - while  make sure the randomIndex will not match an already filled index
           do {
             randomIndex =
               availableCells[Math.floor(Math.random() * availableCells.length)];
