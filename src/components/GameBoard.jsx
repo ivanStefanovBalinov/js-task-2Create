@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Cell from "./Cell";
 import "../Styles/GameBoard.css";
 import Modal from "./Modal";
@@ -10,12 +10,14 @@ export default function GameBoard() {
   const [playerTurn, setPlayerTurn] = useState(true);
   const [computerTurn, setComputerTurn] = useState(false);
 
+  //Helper function to managing disabled cells
   const disableCells = (index) => {
     const updatedDisabledCells = [...disabledCells];
     updatedDisabledCells[index] = true;
     setDisabledCells(updatedDisabledCells);
   };
 
+  //HandleCellClick  colors clicked cell red.
   const handleCellClick = (index) => {
     const updatedCells = [...cells];
     updatedCells[index] = "red";
@@ -25,6 +27,8 @@ export default function GameBoard() {
     setComputerTurn(true);
   };
 
+  //Custom hook that simulates a computer move.
+  //Shows and hides modal.
   useComputerTurn(
     computerTurn,
     cells,
